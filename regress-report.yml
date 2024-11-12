@@ -56,7 +56,7 @@ bugreports:
     actual-result: |
       На странице отображаются все товары.
 
-  test-cases:
+test-cases:
   - summary: |
       ввод в поле поиска запроса на языке  который выбран на сайте
     status: fail
@@ -81,7 +81,7 @@ bugreports:
     actual-result: |
       На странице отображаются все товары поиск не осуществляется
 
-  test-cases:
+test-cases:
   - summary: |
       Проверка отображения категорий поиска после нажатия на кнопку Category/Категория
     status: pass
@@ -91,5 +91,216 @@ bugreports:
     status: pass
 
 bugreports: []
+
+test-cases:
+  - summary: |
+      Работа фильтра при выборе одного значения
+    status: pass
+
+  - summary: |
+      Работа фильтра при выборе одного значения
+    status: pass
+
+bugreports: []
+
+
+test-cases:
+  - summary: |
+      Работа фильтра по бренду при выборе нескольких значений
+    status: pass
+
+  - summary: |
+      Работа фильтра по бренду при выборе нескольких значений
+    status: pass
+
+bugreports: []
+  
+test-cases:
+  - summary: |
+      Проверка работы фильтра по бренду при снятии чекбокса с установленного значенияй
+    status: pass
+
+  - summary: |
+      Проверка работы фильтра по бренду при снятии чекбокса с установленного значения
+    status: pass
+
+bugreports: []
+  
+
+test-cases:
+  - summary: |
+      Работы фильтра по цене товара
+    status: pass
+
+  - summary: |
+      Работы фильтра по цене товара
+    status: pass
+
+bugreports: []
+
+test-cases:
+  - summary: |
+      Работа фильтра при вводе отрицательных или нулевых значений в поле цена товара
+    status: fail
+
+  - summary: |
+      Работа фильтра при вводе отрицательных или нулевых значений в поле цена товара
+    status: fail
+
+bugreports:
+  - summary: |
+    В поле фильтра по цене есть возможность вводить отрицательные и нулевые значения
+    environment: |
+      Версия Сhrome 130.0.6723.92 (Официальная сборка), (64 бит)
+      Windows 11 Pro 22H2
+    steps-to-reproduce: |
+      1.Вводим в поле "от" значение -5
+      2. Вводим в поле "до"значение 0
+    expected-result: |
+      Должна быть проверка на ввод отрицательных значений в поле фильтра по цене
+    actual-result: |
+      В поле есть возможность ввести отрицательные и нулевые значения
+
+test-cases:
+  - summary: |
+      Работа фильтра по цене при вводе в поле  "от" значение больше максимального
+    status: pass
+
+  - summary: |
+      Работа фильтра по цене при вводе в поле  "от" значение больше максимального
+    status: fail
+
+bugreports:
+  - summary: |
+    Не работает фильтр при вводе в поле цены "от" значение больше максимального
+    environment: |
+      Версия Сhrome 130.0.6723.92 (Официальная сборка), (64 бит)
+      Windows 11 Pro 22H2
+    steps-to-reproduce: |
+      1.Вводим в поле "от" значение 7000
+    expected-result: |
+      Выводится сообщение "Товар не найден"
+    actual-result: |
+      Фильтр не работает, товары отображаются
+
+test-cases:
+  - summary: |
+      Подробная информация о товаре
+    status: pass
+
+  - summary: |
+      Подробная информация о товаре
+    status: pass
+
+bugreports: []
+
+test-cases:
+  - summary: |
+      
+    status: pass
+
+  - summary: |
+      Добавление товара в корзину
+    status: pass
+
+bugreports: []
+
+
+test-cases:
+  - summary: |
+      Добавление товара в корзину из карточки товара
+    status: pass
+
+  - summary: |
+      Добавление товара в корзину из карточки товара
+    status: pass
+
+bugreports: []
+
+test-cases:
+  - summary: |
+      Добавление товара в корзину которого нет в наличии
+    status: fail
+
+  - summary: |
+      Добавление товара в корзину которого нет в наличии
+    status: fail
+
+bugreports:
+  - summary: |
+    Добавление товара в корзину которого нет в наличии
+    environment: |
+      Версия Сhrome 130.0.6723.92 (Официальная сборка), (64 бит)
+      Windows 11 Pro 22H2
+    steps-to-reproduce: |
+      1. Убираем чекбокс с фильтра "В наличии"
+      2. Нажимаем на карточку товара 
+      3. Нажимаем на кнопку "В корзину"
+    expected-result: |
+      Товар не должен быть добавлен в корзину
+    actual-result: |
+      Товар добавляется в корзину
+
+test-cases:
+  - summary: |
+      Просмотр товаров в корзине
+    status: pass
+
+  - summary: |
+      Просмотр товаров в корзине
+    status: pass
+
+bugreports: []
+
+test-cases:
+  - summary: |
+      Просмотр количества товаров в корзине
+    status: pass
+
+  - summary: |
+      Просмотр количества товаров в корзине
+    status: pass
+
+bugreports: []
+
+
+test-cases:
+  - summary: |
+      Удаление товаров из корзины
+    status: pass
+
+  - summary: |
+      Удаление товаров из корзины
+    status: pass
+
+bugreports: []
+
+
+test-cases:
+  - summary: |
+      Проверка кнопки "Очистить корзину"
+    status: pass
+
+  - summary: |
+      Проверка кнопки "Очистить корзину"
+    status: pass
+
+bugreports: []
+
+test-cases:
+  - summary: |
+      Проверка кнопки "Продолжить покупки"
+    status: pass
+
+  - summary: |
+      Проверка кнопки "Продолжить покупки"
+    status: pass
+
+bugreports: []
+
+  
+
+
+ 
   
 
