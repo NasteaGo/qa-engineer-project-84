@@ -4,8 +4,9 @@ job: QA Engineer
 level: junior
 email: nastasay_08@mail.ru
 description: | 
-  специалист по тестированию ПО
-scills: 
+  Специалист по тестированию ПО
+  
+skills:
   - Функциональное тестирование
   - Написание багрепортов
   - Английский язык C1
